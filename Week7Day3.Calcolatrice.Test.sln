@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wee7Day3.Calcolatrice.Core"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Day3.Calcolatrice", "Week7Day3.Calcolatrice\Week7Day3.Calcolatrice.csproj", "{8A34B456-E743-4B8D-AE1F-61B08424D778}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Day3.Calcolatrice.WinForms", "Week7Day3.Calcolatrice.WinForms\Week7Day3.Calcolatrice.WinForms.csproj", "{CCCD484D-0B13-4964-91D3-078D0FDAAA16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week7Day3.Calcolatrice.WinForms", "Week7Day3.Calcolatrice.WinForms\Week7Day3.Calcolatrice.WinForms.csproj", "{CCCD484D-0B13-4964-91D3-078D0FDAAA16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7Day3.Calcolatrice.WPF", "Week7Day3.Calcolatrice.WPF\Week7Day3.Calcolatrice.WPF.csproj", "{F07E9267-F26C-4235-AF49-9AFB1DE3B27F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CCCD484D-0B13-4964-91D3-078D0FDAAA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCCD484D-0B13-4964-91D3-078D0FDAAA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCCD484D-0B13-4964-91D3-078D0FDAAA16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F07E9267-F26C-4235-AF49-9AFB1DE3B27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07E9267-F26C-4235-AF49-9AFB1DE3B27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07E9267-F26C-4235-AF49-9AFB1DE3B27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07E9267-F26C-4235-AF49-9AFB1DE3B27F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
