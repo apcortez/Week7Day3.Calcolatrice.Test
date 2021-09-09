@@ -4,36 +4,42 @@ namespace Wee7Day3.Calcolatrice.Core
 {
     public class Calculator
     {
-        decimal? risultato;
-        public decimal? Somma(decimal a, decimal b)
+        double? risultato;
+        public double? Somma(double a, double b)
         {
             risultato = a + b;
             return risultato;
         }
 
-        public decimal? Sottrai(decimal a, decimal b)
+        public double? Sottrai(double a, double b)
         {
             risultato = a - b;
             return risultato;
         }
 
-        public decimal? Moltiplica(decimal a, decimal b)
+        public double? Moltiplica(double a, double b)
         {
             risultato = a * b;
             return risultato;
         }
 
-        public decimal? Dividi(decimal a, decimal b)
+        /// <summary>
+        /// Ritorna un errore in caso ci sia la divisione per zero.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public double? Dividi(double a, double b)
         {
             try
             {
                 risultato = a / b;
                 
-            }catch(DivideByZeroException e) { Console.WriteLine("Errore: divisione per zero"); risultato = null; }
+            }catch(DivideByZeroException e) { risultato = null; }
             return risultato;
         }
 
-        public bool VerificaSeAMaggioreDiB(decimal a, decimal b)
+        public bool VerificaSeAMaggioreDiB(double a, double b)
         {
             if (a >= b)
             {

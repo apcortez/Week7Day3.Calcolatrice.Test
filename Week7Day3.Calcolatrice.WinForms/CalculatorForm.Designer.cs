@@ -44,10 +44,10 @@ namespace Week7Day3.Calcolatrice.WinForms
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button0000 = new System.Windows.Forms.Button();
-            this.button000 = new System.Windows.Forms.Button();
+            this.buttondividi = new System.Windows.Forms.Button();
+            this.buttonuguale = new System.Windows.Forms.Button();
             this.button00 = new System.Windows.Forms.Button();
-            this.button0 = new System.Windows.Forms.Button();
+            this.buttonpunto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textValue
@@ -113,8 +113,10 @@ namespace Week7Day3.Calcolatrice.WinForms
             this.buttonpiu.Name = "buttonpiu";
             this.buttonpiu.Size = new System.Drawing.Size(44, 39);
             this.buttonpiu.TabIndex = 6;
+            this.buttonpiu.Tag = "somma";
             this.buttonpiu.Text = "+";
             this.buttonpiu.UseVisualStyleBackColor = true;
+            this.buttonpiu.Click += new System.EventHandler(this.buttonpiu_Click);
             // 
             // buttonmeno
             // 
@@ -122,8 +124,10 @@ namespace Week7Day3.Calcolatrice.WinForms
             this.buttonmeno.Name = "buttonmeno";
             this.buttonmeno.Size = new System.Drawing.Size(44, 39);
             this.buttonmeno.TabIndex = 10;
+            this.buttonmeno.Tag = "sottrai";
             this.buttonmeno.Text = "-";
             this.buttonmeno.UseVisualStyleBackColor = true;
+            this.buttonmeno.Click += new System.EventHandler(this.buttonmeno_Click);
             // 
             // button6
             // 
@@ -161,8 +165,10 @@ namespace Week7Day3.Calcolatrice.WinForms
             this.buttonmoltiplica.Name = "buttonmoltiplica";
             this.buttonmoltiplica.Size = new System.Drawing.Size(44, 39);
             this.buttonmoltiplica.TabIndex = 14;
+            this.buttonmoltiplica.Tag = "moltiplica";
             this.buttonmoltiplica.Text = "*";
             this.buttonmoltiplica.UseVisualStyleBackColor = true;
+            this.buttonmoltiplica.Click += new System.EventHandler(this.buttonmoltiplica_Click);
             // 
             // button3
             // 
@@ -194,23 +200,26 @@ namespace Week7Day3.Calcolatrice.WinForms
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button0000
+            // buttondividi
             // 
-            this.button0000.Location = new System.Drawing.Point(258, 300);
-            this.button0000.Name = "button0000";
-            this.button0000.Size = new System.Drawing.Size(44, 39);
-            this.button0000.TabIndex = 18;
-            this.button0000.Text = "/";
-            this.button0000.UseVisualStyleBackColor = true;
+            this.buttondividi.Location = new System.Drawing.Point(258, 300);
+            this.buttondividi.Name = "buttondividi";
+            this.buttondividi.Size = new System.Drawing.Size(44, 39);
+            this.buttondividi.TabIndex = 18;
+            this.buttondividi.Tag = "dividi";
+            this.buttondividi.Text = "/";
+            this.buttondividi.UseVisualStyleBackColor = true;
+            this.buttondividi.Click += new System.EventHandler(this.buttondividi_Click);
             // 
-            // button000
+            // buttonuguale
             // 
-            this.button000.Location = new System.Drawing.Point(188, 300);
-            this.button000.Name = "button000";
-            this.button000.Size = new System.Drawing.Size(44, 39);
-            this.button000.TabIndex = 17;
-            this.button000.Text = "=";
-            this.button000.UseVisualStyleBackColor = true;
+            this.buttonuguale.Location = new System.Drawing.Point(188, 300);
+            this.buttonuguale.Name = "buttonuguale";
+            this.buttonuguale.Size = new System.Drawing.Size(44, 39);
+            this.buttonuguale.TabIndex = 17;
+            this.buttonuguale.Text = "=";
+            this.buttonuguale.UseVisualStyleBackColor = true;
+            this.buttonuguale.Click += new System.EventHandler(this.buttonuguale_Click);
             // 
             // button00
             // 
@@ -222,25 +231,25 @@ namespace Week7Day3.Calcolatrice.WinForms
             this.button00.UseVisualStyleBackColor = true;
             this.button00.Click += new System.EventHandler(this.button00_Click);
             // 
-            // button0
+            // buttonpunto
             // 
-            this.button0.Location = new System.Drawing.Point(39, 300);
-            this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(44, 39);
-            this.button0.TabIndex = 15;
-            this.button0.Text = ".";
-            this.button0.UseVisualStyleBackColor = true;
-            this.button0.Click += new System.EventHandler(this.button0_Click);
+            this.buttonpunto.Location = new System.Drawing.Point(39, 300);
+            this.buttonpunto.Name = "buttonpunto";
+            this.buttonpunto.Size = new System.Drawing.Size(44, 39);
+            this.buttonpunto.TabIndex = 15;
+            this.buttonpunto.Text = ".";
+            this.buttonpunto.UseVisualStyleBackColor = true;
+            this.buttonpunto.Click += new System.EventHandler(this.buttonpunto_Click);
             // 
             // CalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 366);
-            this.Controls.Add(this.button0000);
-            this.Controls.Add(this.button000);
+            this.Controls.Add(this.buttondividi);
+            this.Controls.Add(this.buttonuguale);
             this.Controls.Add(this.button00);
-            this.Controls.Add(this.button0);
+            this.Controls.Add(this.buttonpunto);
             this.Controls.Add(this.buttonmoltiplica);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -280,10 +289,10 @@ namespace Week7Day3.Calcolatrice.WinForms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button0000;
-        private System.Windows.Forms.Button button000;
+        private System.Windows.Forms.Button buttondividi;
+        private System.Windows.Forms.Button buttonuguale;
         private System.Windows.Forms.Button button00;
-        private System.Windows.Forms.Button button0;
+        private System.Windows.Forms.Button buttonpunto;
     }
 }
 

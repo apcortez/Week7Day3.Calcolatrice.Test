@@ -16,9 +16,9 @@ namespace Week7Day3.Calcolatrice
             do
             {
                 Console.WriteLine("Inserisci 1^ numero:");
-                decimal a = InserisciNumero();
+                double a = InserisciNumero();
                 Console.WriteLine("Inserisci 2^ numero:");
-                decimal b = InserisciNumero();
+                double b = InserisciNumero();
                 Console.WriteLine();
                 Console.WriteLine("#############################################");
                 Console.WriteLine("Selezionare un operazione da eseguire:");
@@ -35,7 +35,7 @@ namespace Week7Day3.Calcolatrice
                 Console.WriteLine();
                 Console.WriteLine("Quale operazione vuoi scegliere?");
                 string scelta = Console.ReadLine();
-                decimal? risultato = 0; bool confronto= true;
+                double? risultato = 0; bool confronto= true;
                 switch (scelta)
                 {
                     case "1":
@@ -80,15 +80,15 @@ namespace Week7Day3.Calcolatrice
         }
 
 
-        private static decimal InserisciNumero()
+        private static double InserisciNumero()
         {
-            bool isdecimal;
-            decimal numero;
+            bool isdouble;
+            double numero;
             do
             {
-                isdecimal = decimal.TryParse(Console.ReadLine(), out numero);
+                isdouble = double.TryParse(Console.ReadLine(), out numero);
 
-            } while (!isdecimal);
+            } while (!isdouble);
 
             return numero;
         }

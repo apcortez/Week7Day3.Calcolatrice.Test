@@ -13,7 +13,7 @@ namespace Week7Day3.Calcolatrice.Test
             Calculator calcolatrice = new Calculator();
 
             //ACT: chiedi funzionalità da testare
-            decimal? risultato = calcolatrice.Somma(10, 33);
+            double? risultato = calcolatrice.Somma(10, 33);
 
             //ASSERT: verifica del risultato
             Assert.True(risultato == 43);
@@ -25,10 +25,10 @@ namespace Week7Day3.Calcolatrice.Test
             Calculator calcolatrice = new Calculator();
 
             //ACT: chiedi funzionalità da testare
-            decimal? risultato = calcolatrice.Sottrai(10.50m, 1);
+            double? risultato = calcolatrice.Sottrai(10.50, 1);
 
             //ASSERT: verifica del risultato
-            Assert.True(risultato == 9.50m);
+            Assert.True(risultato == 9.50);
         }
         [Fact]
         public void TestCaseMoliplicazione()
@@ -37,7 +37,7 @@ namespace Week7Day3.Calcolatrice.Test
             Calculator calcolatrice = new Calculator();
 
             //ACT: chiedi funzionalità da testare
-            decimal? risultato = calcolatrice.Moltiplica(10, 33);
+            double? risultato = calcolatrice.Moltiplica(10, 33);
 
             //ASSERT: verifica del risultato
             Assert.True(risultato == 330);
@@ -49,7 +49,7 @@ namespace Week7Day3.Calcolatrice.Test
             Calculator calcolatrice = new Calculator();
 
             //ACT: chiedi funzionalità da testare
-            decimal? risultato = calcolatrice.Dividi(150, 3);
+            double? risultato = calcolatrice.Dividi(150, 3);
 
             //ASSERT: verifica del risultato
             Assert.True(risultato == 50);
@@ -61,7 +61,7 @@ namespace Week7Day3.Calcolatrice.Test
             Calculator calcolatrice = new Calculator();
 
             //ACT: chiedi funzionalità da testare
-            decimal? risultato = calcolatrice.Dividi(45, 0);
+            double? risultato = calcolatrice.Dividi(45, 0);
 
             //ASSERT: verifica del risultato
             Assert.True(risultato==null);
@@ -84,7 +84,7 @@ namespace Week7Day3.Calcolatrice.Test
             //ARRANGE: predisposizione del test
             Calculator calcolatrice = new Calculator(); //modificate il nome della classe in base a quella che avete voi nel Core
                                                         //ACT: chiamata alla funzionalità da testare
-            bool risultato = calcolatrice.VerificaSeAMaggioreDiB(3.2m, 3.2m);
+            bool risultato = calcolatrice.VerificaSeAMaggioreDiB(3.2, 3.2);
             //ASSERT: valutazione del risultato atteso vs restituito
             Assert.True(risultato == true);
         }

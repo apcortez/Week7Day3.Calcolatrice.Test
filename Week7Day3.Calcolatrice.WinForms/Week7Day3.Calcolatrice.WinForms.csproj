@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Wee7Day3.Calcolatrice.Core\Wee7Day3.Calcolatrice.Core.csproj" />
+  </ItemGroup>
+
 </Project>
